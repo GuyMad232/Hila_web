@@ -1,0 +1,432 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+    background-color: #f6f6f6;
+    overflow-x: hidden;
+    /* Prevents horizontal scroll */
+}
+
+
+.whyme {
+    background-color: #c9d4c1;
+    /* Light green background */
+    padding: 50px 20px;
+    text-align: center;
+    /* Keep text centered */
+    border-radius: 10px;
+    width: 100%;
+    /* Make the background span the full width of the page */
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect width */
+    direction: rtl;
+    /* Set text direction to right-to-left */
+}
+
+.whyme h1 {
+    font-size: 2.5em;
+    color: #333;
+    /* Darker color for the title */
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.whyme p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.whyme strong {
+    font-weight: bold;
+}
+
+.whyme-button {
+    background-color: #efeae5;
+    /* Button color */
+    border: 1px solid #333;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.whyme-button:hover {
+    transform: scale(1.1);
+    /* Scale the button by 1.1 on hover */
+}
+
+
+
+
+
+
+
+/* Course Types Section */
+.course-types {
+    background-color: #f6f6f6;
+    padding: 50px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.course-types h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.course-type-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.course-box {
+    background-color: #c6ced1;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    min-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.course-icon {
+    width: 60px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: -20px;
+}
+
+.course-box h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.course-box p {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.6;
+    margin-right: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Current Courses Section */
+.current-courses {
+    background-color: #f6f6f6;
+    padding: 50px 20px;
+    text-align: center;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+.current-courses h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.current-course-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cur-course-box {
+    background-color: #efeae5;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    /* Three courses per row */
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cur-course-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cur-course-box h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.cur-course-box img {
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+
+
+/* pricing section */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 50px;
+    background-image: url('../images/G4nOOghcYgga84SyaS0qycS - Edited.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 90%;
+}
+
+.pricing-box {
+    background-color: #c6ced1;
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.6s ease;
+    /* Add transition property */
+}
+
+.pricing-box:hover {
+    transform: scale(1.1);
+}
+
+
+.pricing-box h1 {
+    font-size: 2.8em;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    color: #8f9185;
+    font-weight: bold;
+}
+
+/* Flexbox for aligning the pricing rows */
+.pricing-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pricing-details p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.moredetails {
+    font-weight: 300;
+    /* Use numeric font weight instead of 'light' */
+    font-size: 0.5em;
+    /* Adjust font size using em or smaller px value */
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.price span {
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.pricing-box p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.pricing-box p span {
+    font-weight: bold;
+    color: #000;
+}
+
+.pricing-box ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.pricing-box ul li {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+    padding-right: 10px;
+}
+
+.pricing-button {
+    background-color: #efeae5;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.pricing-button:hover {
+    background-color: #e0dcd8;
+}
+
+
+
+
+/* Sylabus Section */
+.syllabus-container {
+    background-color: #c9d4c1;
+    /* Light green background */
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 40px;
+}
+
+.syllabus-container h1 {
+    font-size: 2.8em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.syllabus-container p {
+    font-size: 1.3em;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.syllabus-button {
+    background-color: #efeae5;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.syllabus-button:hover {
+    background-color: #efeae5;
+    transform: scale(1.1);
+}
+
+
+
+/* Schedule Section */
+.schedule-section {
+    padding: 50px 0;
+    background-color: #f6f6f6;
+}
+
+.schedule-section h1 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.schedule-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schedule-table {
+    width: 95%;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.schedule-table th {
+    background-color: #8f9185;
+    color: white;
+}
+
+.schedule-table td {
+    background-color: #f9f9f9;
+    font-size: 1em;
+}
+
+.schedule-table td p {
+    margin: 5px 0;
+}
+
+/* Styling the highlighted course boxes */
+.schedule-table .highlight {
+    background-color: #c6ced1;
+    border-radius: 5px;
+}
+
+/* Course name styling */
+.course-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Course date bold styling */
+.course-date {
+    font-weight: bold;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .schedule-table {
+        width: 100%;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .schedule-section h1 {
+        font-size: 2em;
+    }
+
+    .course-name {
+        font-size: 1.2em;
+    }
+}
