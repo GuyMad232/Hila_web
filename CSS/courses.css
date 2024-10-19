@@ -209,13 +209,11 @@ body {
     text-align: center;
     position: relative;
     transition: transform 0.6s ease;
-    /* Add transition property */
 }
 
 .pricing-box:hover {
     transform: scale(1.1);
 }
-
 
 .pricing-box h1 {
     font-size: 2.8em;
@@ -225,7 +223,6 @@ body {
     font-weight: bold;
 }
 
-/* Flexbox for aligning the pricing rows */
 .pricing-details {
     display: flex;
     justify-content: space-between;
@@ -240,9 +237,7 @@ body {
 
 .moredetails {
     font-weight: 300;
-    /* Use numeric font weight instead of 'light' */
     font-size: 0.5em;
-    /* Adjust font size using em or smaller px value */
 }
 
 .price {
@@ -295,6 +290,28 @@ body {
 .pricing-button:hover {
     background-color: #e0dcd8;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        /* Reduced gap between items */
+    }
+
+    .pricing-box {
+        width: 100%;
+        max-width: 350px;
+        /* Ensuring the boxes don't get too wide */
+    }
+
+    .pricing-button {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+}
+
 
 
 
