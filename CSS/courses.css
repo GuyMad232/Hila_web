@@ -123,6 +123,21 @@ body {
     margin-right: 40px;
 }
 
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .course-type-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-box {
+        width: 90%;
+        /* Make each box take most of the width on smaller screens */
+        min-width: unset;
+    }
+}
+
+
 
 
 
@@ -430,13 +445,37 @@ body {
 /* Responsive design for mobile */
 @media (max-width: 768px) {
     .schedule-table {
+        display: block;
         width: 100%;
     }
 
-    .schedule-table th,
+    .schedule-table thead {
+        display: none;
+    }
+
+    .schedule-table tbody {
+        display: block;
+    }
+
+    .schedule-table tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+    }
+
     .schedule-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         font-size: 0.9em;
         padding: 10px;
+    }
+
+    .schedule-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex: 1;
+        text-align: left;
     }
 
     .schedule-section h1 {
