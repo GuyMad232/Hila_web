@@ -490,3 +490,50 @@ body {
         display: block;
     }
 }
+
+/*fix shifting*/
+.course-type-container,
+.current-course-container,
+.pricing-container {
+    flex-wrap: wrap;
+    width: 100%;
+    /* Ensure containers take up 100% width of the viewport */
+    margin: 0 auto;
+    /* Center the container */
+}
+
+.whyme,
+.course-types,
+.current-courses,
+.schedule-section,
+.pricing-container,
+.syllabus-container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+
+    .course-box,
+    .cur-course-box,
+    .pricing-box {
+        width: 90%;
+        margin: 0 auto;
+        /* Center the boxes */
+    }
+
+    .course-type-container,
+    .current-course-container,
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.schedule-section,
+.current-courses,
+.course-types,
+.pricing-container {
+    overflow-x: hidden;
+}
