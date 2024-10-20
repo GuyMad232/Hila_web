@@ -23,6 +23,16 @@ body {
     background-color: #EDEAE7;
 }
 
+.info-box center {
+    margin-top: -20px;
+}
+
+.info-box p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
 /* Styles for the back link */
 .content-container a {
     color: blue;

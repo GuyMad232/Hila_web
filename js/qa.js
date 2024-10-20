@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 answer.style.paddingBottom = '15px';
             }
 
-            // Delay scrolling just a bit to give the transition some time
-            setTimeout(() => {
-                this.parentElement.scrollIntoView({ behavior: 'smooth' });
-            }, 300);
+            // The following section has been removed to prevent auto-toggle scrolling
+            // setTimeout(() => {
+            //    this.parentElement.scrollIntoView({ behavior: 'smooth' });
+            // }, 300);
         });
     });
 });
