@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Lora', serif;
+    font-family: 'Alef', serif;
     background-color: #f6f6f6;
     overflow-x: hidden;
     /* Prevents horizontal scroll */
@@ -422,6 +422,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .schedule-table {
