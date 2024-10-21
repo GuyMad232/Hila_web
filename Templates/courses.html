@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses</title>
-    <base href="/Hila_web/">
-    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSs/header.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/courses.css">
     <script src="js/includeHTML.js" defer></script>
@@ -94,7 +93,7 @@
 
 
 <!-- Schedule Section -->
-<div class="schedule-section" dir="rtl">
+<div id= "schedule" class="schedule-section" dir="rtl">
     <h1>מערכת שעות תשפ"ה</h1>
 
     <!-- Horizontal Schedule Table for larger screens -->
@@ -232,7 +231,7 @@
 
 
  <!-- Pricing Section -->
-<div class="pricing-container" dir="rtl">
+<div id="pricing" class="pricing-container" dir="rtl">
 
     <div class="pricing-box">
         <h1>מקוון</h1>
@@ -293,7 +292,7 @@
 
 
 <!-- Sylabus Section -->
-<div class="syllabus-container" dir="rtl">
+<div id="syllabus" class="syllabus-container" dir="rtl">
     <h1>סילבוסים</h1>
     <p>
         מידע מקיף על ההשתלמויות ניתן למצוא בלחיצה על הכפתור מטה,
@@ -332,6 +331,20 @@
         // Add event listener to window resize
         window.addEventListener('resize', toggleScheduleVisibility);
     });
+
+    window.onscroll = function() {stickyNav()};
+    var navbar = document.getElementById("sticky-nav");
+    var sticky = navbar.offsetTop;
+
+    function stickyNav() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+
 </script>
 </body>
 </html>
