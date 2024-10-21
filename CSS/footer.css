@@ -12,6 +12,8 @@ body {
     font-family: 'Alef', serif;
     background-color: #efeae5;
     color: #333;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 body {
