@@ -1,13 +1,37 @@
+:root {
+    --background: #efeae5;
+    --border: rgb(153, 153, 153);
+    --white: #ffffff;
+    --light-grey: #EEEDEB;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alef', serif;
+    background-color: #efeae5;
+    color: #333;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Ensure footer sticks to the bottom */
 footer {
-    margin-top: auto;
     background-color: var(--background);
     border-top: 1px solid var(--border);
     width: 100%;
-    padding: 20px 0;
-    /* Increased padding to give more height */
+    padding: 10px 0;
     justify-content: center;
     align-items: center;
     display: flex;
+    margin-top: auto;
 }
 
 .footer-container {
@@ -18,6 +42,7 @@ footer {
     max-width: 1200px;
     padding: 0 20px;
     font-size: 1em;
+    gap: 30px;
 }
 
 .footer-section {
@@ -25,27 +50,15 @@ footer {
     align-items: center;
 }
 
-/* Increased gap between footer sections */
-.footer-section p,
-.footer-section a {
-    margin: 0 30px;
-    /* Increase the gap between elements */
-}
-
-/* Order of the sections: phone number first, social links last */
-.footer-container {
-    flex-direction: row-reverse;
-}
-
 .footer-section img {
-    width: 25px;
-    /* Slightly increase icon size for better visibility */
-    height: 25px;
+    width: 20px;
+    height: 20px;
     margin-right: 10px;
 }
 
 .footer-section p {
     margin: 0;
+    padding: 0 15px;
     color: black;
     font-weight: bold;
 }
@@ -64,18 +77,9 @@ footer {
 }
 
 .footer-section a img {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     margin-left: 10px;
-}
-
-/* Fix for unwanted scrolling */
-html,
-body {
-    height: 100%;
-    margin: 0;
-    overflow-x: hidden;
-    /* Prevent horizontal scrolling */
 }
 
 @media (max-width: 768px) {
