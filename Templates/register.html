@@ -14,45 +14,62 @@
         .center {
             text-align: center;
         }
+
         .info-box {
             margin: 20px 0;
             padding: 10px;
             background-color: #EDEAE7;
         }
+
+        .form-container {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .info-box p {
+            margin: 5px 0;
+        }
     </style>
 </head>
-<body>
+<body class="debug-border">
     <!-- Include the header component -->
-    <div data-include="Templates/header.html"></div>
+    <div data-include="Templates/header.html" class="debug-border"></div>
 
-    <div class="content-container">
-        <!-- New info content here -->
+    <!-- Main Content Container -->
+    <div class="content-container debug-border">
+        <!-- Information Section -->
         <div class="info-box center" dir="rtl">
             <h1 class="center">טופס הרשמה - השתלמויות</h1>
-            <p>שליחת טופס  אינה מהווה אישור הרשמה.</p>
+            <p>שליחת טופס אינה מהווה אישור הרשמה.</p>
             <p>אישור הרשמה יישלח במייל לאחר תשלום מקדמה ע"ס 500 שקלים</p>
-            <pלאחר מילוי טופס הרשמה, אשלח לכן פרטי חשבון בנק, בהנחה וזו אפשרות התשלום שבחרתן</p>
+            <p>לאחר מילוי טופס הרשמה, אשלח לכן פרטי חשבון בנק, בהנחה וזו אפשרות התשלום שבחרתן</p>
             <p>להרשמה מהירה ניתן לכתוב אלי ישירות למייל hilaflor46@gmail.com</p>
         </div>
 
-        <div id="formkeep-embed" data-formkeep-url="https://formkeep.com/p/8c962537b3f57b59e17494482a5d8b8e?embedded=1"></div>
+        <!-- Form Section -->
+        <div class="form-container debug-border">
+            <div id="formkeep-embed" data-formkeep-url="https://formkeep.com/p/8c962537b3f57b59e17494482a5d8b8e?embedded=1"></div>
+        </div>
+    </div>
 
-        <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
-        <script type="text/javascript" src="https://cdn.formkeep.com/formkeep-embed.js"></script>
-        
-        <!-- Get notified when the form is submitted, add your own code below: -->
-        <script>
-        const formkeepEmbed = document.querySelector('#formkeep-embed')
+    <!-- Include the footer component -->
+    <div data-include="Templates/footer.html" class="debug-border"></div>
+
+    <!-- Formkeep Embed Scripts -->
+    <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.formkeep.com/formkeep-embed.js"></script>
+    
+    <!-- Get notified when the form is submitted, add your own code below: -->
+    <script>
+        const formkeepEmbed = document.querySelector('#formkeep-embed');
         
         formkeepEmbed.addEventListener('formkeep-embed:submitting', _event => {
-          console.log('Submitting form...')
-        })
+            console.log('Submitting form...');
+        });
         
         formkeepEmbed.addEventListener('formkeep-embed:submitted', _event => {
-          console.log('Submitted form...')
-        })
-        </script>
-    </div>
-    <div data-include="Templates/footer.html"></div>
+            console.log('Submitted form...');
+        });
+    </script>
 </body>
 </html>

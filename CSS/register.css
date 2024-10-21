@@ -1,6 +1,6 @@
-/* General body styles to match the home page */
+/* General body styles */
 body {
-    margin: 20px;
+    margin: 0;
     padding-top: 60px;
     font-family: 'Alef', sans-serif;
     background-color: #EDEAE7;
@@ -9,9 +9,10 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    box-sizing: border-box;
 }
 
-/* Main container styles */
+/* Main content container */
 .content-container {
     width: 100%;
     max-width: 1200px;
@@ -21,10 +22,13 @@ body {
     flex-direction: column;
     margin-top: 20px;
     background-color: #EDEAE7;
+    flex-grow: 1;
+    /* This allows the content to grow and take available space */
 }
 
-.info-box center {
-    margin-top: -20px;
+.info-box {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .info-box p {
@@ -33,22 +37,33 @@ body {
     margin-bottom: 5px;
 }
 
-
-
-/* Styles for the back link */
-.content-container a {
-    color: blue;
-    text-decoration: none;
-    margin-bottom: 20px;
-    transition: color 0.3s ease-in-out;
+/* Styles for the form container */
+.form-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: right;
+    text-align: right;
 }
 
-.content-container a:hover {
-    color: darkblue;
-}
 
 /* Centered heading styles */
 .center {
     text-align: center;
     margin-top: 30px;
+}
+
+/* Remove bottom margin from the page */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
