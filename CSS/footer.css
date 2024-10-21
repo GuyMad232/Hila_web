@@ -7,14 +7,13 @@
 
 body {
     margin: 0;
-    padding-bottom: 20px;
     font-family: 'Alef', serif;
     background-color: #efeae5;
     color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 80vh;
+    min-height: 100vh;
 }
 
 /* Footer Section */
@@ -26,6 +25,7 @@ footer {
     justify-content: center;
     align-items: center;
     display: flex;
+    overflow-y: hidden;
 }
 
 .footer-container {
@@ -40,6 +40,7 @@ footer {
     /* Space between sections */
     flex-wrap: nowrap;
     /* Ensure everything stays in one row */
+    overflow-y: hidden;
 }
 
 .footer-section {
