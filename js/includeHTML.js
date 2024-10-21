@@ -7,7 +7,6 @@ function includeHTML() {
             .then(data => {
                 element.innerHTML = data;
                 element.removeAttribute('data-include');
-                includeHTML(); // Recursively call to handle nested includes
                 executeScripts(element); // Execute scripts in the included HTML
             })
             .catch(error => console.error('Error loading HTML component:', error));
