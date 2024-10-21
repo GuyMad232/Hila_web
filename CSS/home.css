@@ -1,4 +1,3 @@
-/* Reset all elements and prevent overflow */
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +5,7 @@
     overflow-x: hidden;
 }
 
-html,
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
     font-family: 'Alef', serif;
     background-color: #efeae5;
 }
@@ -18,36 +13,42 @@ body {
 /* Hero Section */
 .hero-container {
     display: flex;
-    justify-content: space-between;
-    /* Align text and image side by side */
+    justify-content: center;
+    background-color: #efeae5;
     align-items: center;
     min-height: 50vh;
-    width: 100vw;
-    /* Ensure it takes full width */
-    background-color: #efeae5;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .text-content {
+    align-items: center;
     flex: 1;
     text-align: center;
     padding: 20px;
     color: #333;
-    max-width: 550px;
-    margin: 20px;
-    border-radius: 10px;
-    background-color: #f6f6f6;
     border: 1px solid #000;
+    /* Border around the entire text content */
+    max-width: 550px;
+    margin: 20px auto;
+    border-radius: 10px;
+    /* Optional: to round the corners of the border */
+    background-color: #f6f6f6;
+    /* Optional: set background color inside the border */
 }
 
 .text-content h1 {
     font-size: 2.4em;
     color: black;
+    white-space: nowrap;
+    /* Prevents wrapping */
 }
 
 .text-content p {
     font-size: 1.2em;
     color: black;
     margin: 5px 0;
+    /* Adjusted margin for space between paragraphs */
 }
 
 .image-content {
@@ -56,6 +57,8 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-top: 15px;
+    margin-right: 10px;
 }
 
 .image-content img {
@@ -67,12 +70,15 @@ body {
 /* Stats Section */
 .stats-container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #c6ced1;
     padding: 30px 0;
-    width: 100%;
-    /* Ensure full width */
+    width: 100vw;
+    max-width: 99%;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .stat-item {
@@ -98,11 +104,18 @@ body {
     color: black;
 }
 
-/* Responsive Design */
+/* Responsive design */
 @media (max-width: 768px) {
+
+    /* Stack elements vertically on smaller screens */
     .hero-container {
         flex-direction: column;
         text-align: center;
+    }
+
+    .image-content {
+        justify-content: center;
+        margin: 0 auto;
     }
 
     .image-content img {
@@ -111,5 +124,22 @@ body {
 
     .stats-container {
         flex-direction: column;
+        text-align: center;
+    }
+
+    .stat-item {
+        padding: 10px;
+    }
+
+    .stat-item img {
+        max-width: 50px;
+    }
+
+    .stat-item h2 {
+        font-size: 2em;
+    }
+
+    .stat-item p {
+        font-size: 1em;
     }
 }
