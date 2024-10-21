@@ -50,3 +50,37 @@ body {
     text-align: center;
     margin-top: 0;
 }
+
+
+/* Apply right-to-left direction */
+/* Force right-to-left alignment */
+#formkeep-embed {
+    direction: rtl;
+    text-align: right;
+    width: 100%;
+    /* Ensure it takes full width */
+    display: flex;
+    justify-content: flex-start;
+    /* Align form content to the right */
+}
+
+
+/* Ensure form fields and labels are aligned properly */
+#formkeep-embed input,
+#formkeep-embed label,
+#formkeep-embed textarea {
+    direction: rtl;
+    /* Ensure form inputs and labels use RTL direction */
+    text-align: right;
+    /* Align form input content to the right */
+    width: 100%;
+    /* Optional: Ensure form fields take full width */
+}
+
+/* Adjust specific form elements */
+#formkeep-embed input[type="submit"] {
+    width: auto;
+    /* Make the submit button size automatically fit the text */
+    margin-left: auto;
+    /* Push the submit button to the right */
+}
