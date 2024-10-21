@@ -7,17 +7,12 @@ function includeHTML() {
             .then(data => {
                 element.innerHTML = data;
                 element.removeAttribute('data-include');
+                includeHTML(); // Recursively call to handle nested includes
                 executeScripts(element); // Execute scripts in the included HTML
-
-                // Trigger reflow by forcing a redraw
-                document.body.style.display = 'none';
-                document.body.offsetHeight; // force a reflow
-                document.body.style.display = '';
             })
             .catch(error => console.error('Error loading HTML component:', error));
     });
 }
-
 
 function executeScripts(container) {
     var scripts = container.getElementsByTagName("script");
