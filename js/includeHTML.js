@@ -7,11 +7,15 @@ function includeHTML() {
             .then(data => {
                 element.innerHTML = data;
                 element.removeAttribute('data-include');
-                executeScripts(element); // Execute scripts in the included HTML
+                // Reapply styles after content is loaded
+                setTimeout(function () {
+                    element.style.width = '100%'; // Ensure the container takes full width
+                }, 50);
             })
             .catch(error => console.error('Error loading HTML component:', error));
     });
 }
+
 
 function executeScripts(container) {
     var scripts = container.getElementsByTagName("script");

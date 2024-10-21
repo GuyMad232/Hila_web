@@ -5,6 +5,12 @@
     --light-grey: #EEEDEB;
 }
 
+[data-include] {
+    width: 100%;
+    /* Ensure the container takes the full width */
+    display: block;
+}
+
 body {
     margin: 0;
     padding-top: 50px;
@@ -88,7 +94,6 @@ nav li {
 
 nav a {
     position: relative;
-    font-weight: bold;
     color: black;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
