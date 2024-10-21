@@ -8,6 +8,8 @@ footer {
     align-items: center;
     display: flex;
     position: relative;
+    margin-top: auto;
+    /* Pushes footer to the bottom */
 }
 
 .footer-container {

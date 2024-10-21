@@ -7,7 +7,6 @@ body {
     /* Prevents horizontal scroll */
 }
 
-
 .whyme {
     background-color: #c9d4c1;
     /* Light green background */
@@ -153,6 +152,8 @@ body {
     text-align: center;
     box-sizing: border-box;
     direction: rtl;
+    overflow: hidden;
+    /* Prevents overflow from extending the page */
 }
 
 .current-courses h1 {
@@ -166,6 +167,8 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
+    overflow: hidden;
+    /* Make sure no elements overflow */
 }
 
 .cur-course-box {
@@ -212,6 +215,131 @@ body {
     }
 }
 
+
+/* Schedule Section */
+.schedule-section {
+    padding: 0;
+    background-color: transparent;
+    min-height: auto;
+    margin: 0;
+    /* Remove any margins that could affect other sections */
+    overflow: visible;
+    /* Allow content to flow naturally */
+    width: 100%;
+    /* Make sure it takes up the full width */
+    box-sizing: border-box;
+    /* Ensure padding and borders are included in width */
+}
+
+.schedule-section h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Schedule Table Styling */
+.schedule-container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* Ensure full width for the table */
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.schedule-table {
+    width: 100%;
+    /* Ensure the table takes full width */
+    max-width: 1200px;
+    /* Set a max width but let it be responsive */
+    border-collapse: collapse;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 1.2em;
+    color: #333;
+    vertical-align: middle;
+}
+
+.schedule-table th {
+    background-color: #8f9185;
+    color: white;
+}
+
+.schedule-table td {
+    background-color: #f9f9f9;
+    font-size: 1em;
+}
+
+.schedule-table td p {
+    margin: 5px 0;
+    line-height: 1.5em;
+}
+
+/* Highlighted cells */
+.schedule-table .highlight {
+    background-color: #c6ced1;
+    border-radius: 0;
+}
+
+/* Course name and date styling */
+.course-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+}
+
+.course-date {
+    font-weight: bold;
+}
+
+/* Small Screen Styling */
+@media (max-width: 768px) {
+
+    /* Hide the larger table on small screens */
+    .schedule-container {
+        display: none;
+    }
+
+    .small-screen-schedule {
+        display: block;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .day-course {
+        background-color: #f9f9f9;
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .day-course h3 {
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .day-course p {
+        font-size: 1.1em;
+        color: #555;
+    }
+}
 
 
 /* pricing section */
@@ -384,7 +512,6 @@ body {
     font-size: 1.3em;
     color: #333;
     line-height: 1.8;
-    margin-bottom: 30px;
 }
 
 .syllabus-button {
@@ -401,110 +528,4 @@ body {
 .syllabus-button:hover {
     background-color: #efeae5;
     transform: scale(1.1);
-}
-
-
-
-/* Schedule Section */
-.schedule-section {
-    padding: 50px 0;
-    background-color: #f6f6f6;
-}
-
-.schedule-section h1 {
-    font-size: 3em;
-    color: #333;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.schedule-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.schedule-table {
-    width: 95%;
-    border-collapse: collapse;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-}
-
-.schedule-table th,
-.schedule-table td {
-    padding: 15px;
-    text-align: center;
-    border: 1px solid #ccc;
-    font-size: 1.2em;
-    color: #333;
-}
-
-.schedule-table th {
-    background-color: #8f9185;
-    color: white;
-}
-
-.schedule-table td {
-    background-color: #f9f9f9;
-    font-size: 1em;
-}
-
-.schedule-table td p {
-    margin: 5px 0;
-}
-
-/* Styling the highlighted course boxes */
-.schedule-table .highlight {
-    background-color: #c6ced1;
-    border-radius: 5px;
-}
-
-/* Course name styling */
-.course-name {
-    font-size: 1.4em;
-    font-weight: bold;
-    color: #333;
-}
-
-/* Course date bold styling */
-.course-date {
-    font-weight: bold;
-}
-
-/* Small Screen Schedule Styling */
-.small-screen-schedule {
-    display: none;
-    padding: 20px;
-}
-
-.day-course {
-    background-color: #f9f9f9;
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
-.day-course h3 {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.day-course p {
-    font-size: 1.1em;
-    color: #555;
-}
-
-/* Responsive design for mobile */
-@media (max-width: 768px) {
-    .schedule-container {
-        display: none;
-    }
-
-    .small-screen-schedule {
-        display: block;
-    }
 }

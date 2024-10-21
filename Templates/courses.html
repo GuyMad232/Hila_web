@@ -6,8 +6,8 @@
     <title>Courses</title>
     <base href="/Hila_web/">
     <link rel="stylesheet" href="CSS/header.css">
-    <link rel="stylesheet" href="CSS/courses.css">
     <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/courses.css">
     <script src="js/includeHTML.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -91,7 +91,6 @@
         </div>
     </div>
 </div>
-
 
 
 <!-- Schedule Section -->
@@ -225,6 +224,7 @@
             <p>120 שעות אקדמיות</p>
         </div>
     </div>
+
     
 
 
@@ -309,6 +309,29 @@
 
 <div data-include="Templates/footer.html"></div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        function toggleScheduleVisibility() {
+            var largeScreenSchedule = document.querySelector('.schedule-container');
+            var smallScreenSchedule = document.querySelector('.small-screen-schedule');
+            
+            if (window.innerWidth <= 768) {
+                // On smaller screens, hide large table and show small screen content
+                largeScreenSchedule.style.display = 'none';
+                smallScreenSchedule.style.display = 'block';
+            } else {
+                // On larger screens, show the table and hide small screen content
+                largeScreenSchedule.style.display = 'block';
+                smallScreenSchedule.style.display = 'none';
+            }
+        }
 
+        // Call the function on page load
+        toggleScheduleVisibility();
+
+        // Add event listener to window resize
+        window.addEventListener('resize', toggleScheduleVisibility);
+    });
+</script>
 </body>
 </html>

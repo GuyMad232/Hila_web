@@ -7,15 +7,21 @@ function includeHTML() {
             .then(data => {
                 element.innerHTML = data;
                 element.removeAttribute('data-include');
-                // Reapply styles after content is loaded
+
+                // After content is loaded, reapply styles if necessary
                 setTimeout(function () {
                     element.style.width = '100%'; // Ensure the container takes full width
                 }, 50);
+
+                // Check if the newly included content has more includes
+                includeHTML(); // Recursive call to handle nested includes
+
+                // Execute any scripts that were loaded with the included HTML
+                executeScripts(element);
             })
             .catch(error => console.error('Error loading HTML component:', error));
     });
 }
-
 
 function executeScripts(container) {
     var scripts = container.getElementsByTagName("script");
@@ -30,4 +36,5 @@ function executeScripts(container) {
     }
 }
 
+// Initialize the includeHTML function once the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', includeHTML);
