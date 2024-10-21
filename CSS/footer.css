@@ -1,12 +1,36 @@
+:root {
+    --background: #efeae5;
+    --border: rgb(153, 153, 153);
+    --white: #ffffff;
+    --light-grey: #EEEDEB;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alef', serif;
+    background-color: #efeae5;
+    color: #333;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Ensure footer sticks to the bottom */
 footer {
-    margin-top: auto;
-    /* Ensures the footer sticks to the bottom */
     background-color: var(--background);
     border-top: 1px solid var(--border);
     width: 100%;
-    padding: 15px 0;
-    display: flex;
+    padding: 10px 0;
     justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: auto;
 }
 
 .footer-container {
