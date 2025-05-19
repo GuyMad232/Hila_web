@@ -1,4 +1,23 @@
 /* Footer Section */
+/* ensure the page stretches to full viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* make body a column flex container */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* let main grow to push footer down */
+main {
+    flex: 1;
+}
+
+
 footer {
     background-color: var(--background);
     border-top: 1px solid var(--border);

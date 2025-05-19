@@ -60,11 +60,6 @@ body {
 }
 
 
-
-
-
-
-
 /* Course Types Section */
 .course-types {
     background-color: #f6f6f6;
@@ -136,14 +131,6 @@ body {
         min-width: unset;
     }
 }
-
-
-
-
-
-
-
-
 
 
 /* Current Courses Section */
@@ -222,7 +209,7 @@ body {
     padding: 0;
     background-color: transparent;
     min-height: auto;
-    margin: 0;
+    margin: 50px 0 0;
     /* Remove any margins that could affect other sections */
     overflow: visible;
     /* Allow content to flow naturally */
@@ -484,10 +471,6 @@ body {
         padding: 10px 15px;
     }
 }
-
-
-
-
 
 
 /* Sylabus Section */
